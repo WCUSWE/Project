@@ -35,6 +35,17 @@ public class hello implements register {
 		System.out.println("enter your name");
 		name=s.next();
 	}
+	public void feedback() {
+		String fb;
+		System.out.print("Write your feedback here");
+		fb=s.next();
+		if(fb!=null)
+		{
+		System.out.println("thank you for your feedback: "+fb);
+		}
+		else
+			System.out.println("your feedback is invalid");
+	}
 	
 	public static void main(String args[])
 	{
@@ -47,6 +58,7 @@ System.out.println("---------------select 2 view--------");
 System.out.println("---------------select 3 search--------");
 System.out.println("---------------select 4 delete--------");
 System.out.println("---------------select 5 update--------");
+System.out.println("...............select 6 feedback......");
 System.out.println("enter your choice"); 
 
 choice=s.nextInt();
@@ -66,6 +78,8 @@ case 4:
 	break;
 case 5:
 	xy.update(choice, null);
+case 6:
+	xy.feedback();
 default:
 	System.out.println("incorrect choice");
 }
