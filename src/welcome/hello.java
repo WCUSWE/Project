@@ -6,25 +6,23 @@ public class hello implements register {
 	static Scanner s=new Scanner(System.in);
 	@Override
 	public void insert() {
-		String name;
-		System.out.println("enter your name");
-		name=s.next();
+		
 		
 	}
 
 	@Override
-	public void delete() {
-		String name;
-		System.out.println("enter your name");
-		name=s.next();	
+	public void view() {
+		
 		
 	}
 
 	@Override
 	public void edit() {
-		String name;
-		System.out.println("enter your name");
-		name=s.next();
+		
+	}
+
+	@Override
+	public void update(int id, String depart) {
 		
 	}
 
@@ -42,12 +40,13 @@ public class hello implements register {
 	{
 		hello xy=new hello();
 		int choice;
-System.out.println("---------------Welcome to Employee Recruiting System--------");
+System.out.println("---------------Welcome to Student Registration--------");
 System.out.println("---------------select yoour choice--------");
 System.out.println("---------------select 1 register--------");
-System.out.println("---------------select 2 search--------");
-System.out.println("---------------select 3 update--------");
+System.out.println("---------------select 2 view--------");
+System.out.println("---------------select 3 search--------");
 System.out.println("---------------select 4 delete--------");
+System.out.println("---------------select 5 update--------");
 System.out.println("enter your choice"); 
 
 choice=s.nextInt();
@@ -57,7 +56,7 @@ case 1:
 	xy.insert();
 	break;
 case 2 :
-	xy.delete();
+	xy.view();
 	break;
 case 3:
 	xy.search(choice, null);
@@ -65,8 +64,11 @@ case 3:
 case 4:
 	xy.edit();
 	break;
+case 5:
+	xy.update(choice, null);
 default:
 	System.out.println("incorrect choice");
 }
 	}
 }
+
