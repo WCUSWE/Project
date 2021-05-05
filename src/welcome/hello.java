@@ -23,7 +23,7 @@ public class hello implements register {
 	
 
 	@Override
-	public void search() {
+	public void search(int id, String name) {
 		
 		
 	}

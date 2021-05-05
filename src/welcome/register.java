@@ -4,5 +4,5 @@ public interface register {
 public void delete();
 public void edit();
 public void insert();
-public void search();
+public void search(int id, String depart);
 }
